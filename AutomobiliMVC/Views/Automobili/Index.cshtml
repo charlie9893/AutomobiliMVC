@@ -1,0 +1,41 @@
+﻿@model List<AutomobiliMVC.Models.Domain.Automobil>
+
+@{
+}
+
+
+<h1>Lista vozila</h1>
+<table class="table"> 
+    <thead>
+    <tr>
+        <th>Marka</th>
+        <th>Model</th>
+        <th>Godiste</th>
+        <th>Zapremina</th>
+        <th>Snaga</th>
+        <th>Gorivo</th>
+        <th>Karoserija</th>
+        <th>Opis</th>
+        <th>Cena</th>
+        <th>Kontakt</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var automobil in Model)
+    {
+        <tr>
+            <td>@automobil.Marka</td>
+            <td>@automobil.Model</td>
+            <td>@automobil.Godiste</td>
+            <td>@automobil.Zapremina</td>
+            <td>@automobil.Snaga</td
+            <td>@automobil.Gorivo</td>
+            <td>@automobil.Karoserija</td>
+            <td>@automobil.Opis</td>
+            <td>@automobil.Cena</td>
+            <td>@automobil.Kontakt</td>
+        </tr>
+        
+    }
+    </tbody>
+</table>

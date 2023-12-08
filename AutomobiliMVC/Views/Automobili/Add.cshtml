@@ -1,0 +1,62 @@
+﻿@model AutomobiliMVC.Models.DodajAutomobilViewModel
+
+@{
+}
+
+<h1> Dodaj novi automobil</h1>
+
+<form method="post" action="Add">
+    <div class="mb-3">
+        <label for="" class="form-label">Marka</label>
+        <input type="text" class="form-control" asp-for = "Marka">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Model</label>
+        <input type="text" class="form-control" asp-for="Model">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Godiste</label>
+        <input type="number" class="form-control" asp-for="Godiste">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Zapremina (cc)</label>
+        <input type="number" class="form-control" asp-for="Zapremina">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Snaga (KW)</label>
+        <input type="number" class="form-control" asp-for="Snaga">
+    </div>
+    
+    <div class="mb-3">
+        <label for="" class="form-label">Gorivo</label>
+        <input type="text" class="form-control" asp-for="Gorivo">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Karoserija</label>
+        <input type="text" class="form-control" asp-for="Karoserija">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Opis</label>
+        <input type="text" class="form-control" asp-for="Opis">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Cena</label>
+        <input type="number" class="form-control" asp-for="Cena">
+        <div id="number" class="form-text">Cena izrazena u evrima</div>
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Kontakt</label>
+        <input type="text" class="form-control" asp-for="Kontakt">
+    </div>
+    
+   
+    <button type="submit" class="btn btn-primary">Sacuvaj</button>
+</form>
