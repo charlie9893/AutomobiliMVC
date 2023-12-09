@@ -1,9 +1,6 @@
-﻿using System;
-using System.ComponentModel;
-
-namespace AutomobiliMVC.Models.Domain
+﻿namespace AutomobiliMVC.Models
 {
-    public class Automobil
+    public class UpdateAutomobilViewModel
     {
         public Guid Id { get; set; }
         public string Marka { get; set; }
@@ -16,6 +13,5 @@ namespace AutomobiliMVC.Models.Domain
         public string Opis { get; set; }
         public int Cena { get; set; }
         public string Kontakt { get; set; }
-
     }
 }
