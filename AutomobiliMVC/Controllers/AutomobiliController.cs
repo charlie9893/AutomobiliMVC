@@ -105,5 +105,20 @@ namespace AutomobiliMVC.Controllers
 
             return RedirectToAction("Index");
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(UpdateAutomobilViewModel models)
+        {
+            var automobil = await mvcDemoDbContext.Automobili.FindAsync(models.Id);
+
+            if (automobil != null)
+            {
+                mvcDemoDbContext.Automobili.Remove(automobil);
+                await mvcDemoDbContext.SaveChangesAsync();
+                return RedirectToAction("Index");
+            }
+
+                return RedirectToAction("Index");
+        }
     }
 }
