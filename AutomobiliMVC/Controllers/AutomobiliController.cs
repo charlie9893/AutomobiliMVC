@@ -62,7 +62,7 @@ namespace AutomobiliMVC.Controllers
 
                 var viewModel = new UpdateAutomobilViewModel()
                 {
-                    Id = Guid.NewGuid(),
+                    Id = automobil.Id,
                     Marka = automobil.Marka,
                     Model = automobil.Model,
                     Godiste = automobil.Godiste,
@@ -81,21 +81,22 @@ namespace AutomobiliMVC.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> View(UpdateAutomobilViewModel model)
+        public async Task<IActionResult> View(UpdateAutomobilViewModel models)
         {
-            var automobil = await mvcDemoDbContext.Automobili.FindAsync(model.Id);
+            var automobil = await mvcDemoDbContext.Automobili.FindAsync(models.Id);
 
             if (automobil != null)
             {
-                automobil.Marka = model.Marka;
-                automobil.Model = model.Model;
-                automobil.Godiste = model.Godiste;
-                automobil.Zapremina = model.Zapremina;
-                automobil.Gorivo = model.Gorivo;
-                automobil.Karoserija = model.Karoserija;
-                automobil.Opis = model.Opis;
-                automobil.Cena = model.Cena;
-                automobil.Kontakt = model.Kontakt;
+                automobil.Marka = models.Marka;
+                automobil.Model = models.Model;
+                automobil.Godiste = models.Godiste;
+                automobil.Zapremina = models.Zapremina;
+                automobil.Snaga = models.Snaga;
+                automobil.Gorivo = models.Gorivo;
+                automobil.Karoserija = models.Karoserija;
+                automobil.Opis = models.Opis;
+                automobil.Cena = models.Cena;
+                automobil.Kontakt = models.Kontakt;
 
                 await mvcDemoDbContext.SaveChangesAsync();
 
